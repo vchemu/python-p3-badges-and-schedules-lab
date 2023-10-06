@@ -3,17 +3,10 @@ def badge_maker(name):
     return result
 
 def batch_badge_creator(names):
-    speaker_badges = []
-    for name in names:
-        speaker_badges.append(f"Hello, my name is {name}.") 
-    return speaker_badges
+    return [f"Hello, my name is {name}." for name in names]
 
 def assign_rooms(names):
-    speaker_rooms = []
-    for i, name in enumerate(names, start=1):
-        speaker_rooms.append(f"Hello, {name}! You'll be assigned to room {i}!")
-
-    return speaker_rooms
+    return [f"Hello, {name}! You'll be assigned to room {i}!"for i, name in enumerate(names, start=1)]
 
 def printer(names):
     speaker_badges = batch_badge_creator(names)
